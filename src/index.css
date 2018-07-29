@@ -1,0 +1,130 @@
+/*
+Brand Colors
+
+backgroundColor: #eee
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato-Light', sans-serif;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.25em;
+  word-break: break-word;
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 1.125em;
+  }
+}
+
+/* Forms */
+::placeholder, label {
+  color: #3d3d3d;
+}
+input, textarea {
+  color: #3d3d3d !important;
+  background-color: #eee;
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(180deg,transparent 97%,rgba(101, 163, 214) 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+}
+textarea, select, input, button {
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #3d3d3d;
+  -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:focus, input:active,
+textarea:focus, textarea:active {
+  background-image: linear-gradient(180deg,transparent 97%,rgba(101, 163, 214) 0);
+  background-size: 100% 100%;
+}
+/* material design label styling */
+.inputGroup {
+  position:relative;
+  margin-bottom:25px;
+}
+label {
+  font-size:1.5em;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:25px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label {
+  top:-5px;
+  left: 0;
+  font-size:1em;
+}
+
+/* Links */
+a, a:visited {
+  color: #eee;
+  fill: #eee;
+  background-image: linear-gradient(180deg,transparent 65%,rgba(101, 163, 214, 0.5) 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(101, 163, 214, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+a:hover, a:active {
+  background-image: linear-gradient(180deg,transparent 65%,rgba(101, 163, 214, 0.5) 0);
+  background-size: 100% 100%;
+}
+
+.footer a, .footer a:visited {
+  color: #3d3d3d;
+  fill: #3d3d3d;
+  border-bottom: 1px solid rgba(101, 163, 214, 0.5);
+
+}
+/* .footer a {
+  color: #aaa;
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(150deg,transparent 60%,rgba(188, 188, 188, 0.5) 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+}
+.footer a:hover {
+  fill: #65a3d6;
+  background-size: 100% 100%;
+}
+.footer a:active {
+  color: #65a3d6;
+  cursor: default;
+  background-image: linear-gradient(150deg,transparent 60%,rgba(188, 188, 188, 0.5) 0);
+} */
+
+
+@font-face {
+  font-family: 'Lato-Medium';
+  src: local('Lato-Medium'), url(./fonts/Lato-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato-Light';
+  src: local('Lato-Light'), url(./fonts/Lato-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Aleo-Light';
+  src: local('Aleo-Light'), url(./fonts/Aleo-Light.otf) format('opentype');
+}
