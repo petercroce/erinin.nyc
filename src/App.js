@@ -8,6 +8,8 @@ import {
 
 import About from './components/pages/About';
 import Home from './components/pages/Home';
+import Map from './components/pages/Map';
+
 
 import './index.css';
 
@@ -20,7 +22,7 @@ class App extends Component {
             <div>
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/about' component={About} />
+                <Route path='/map' component={Map} />
                 <Route component={Home} />
               </Switch>
             </div>
