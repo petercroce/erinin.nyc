@@ -9,12 +9,11 @@ import colors from '../../../styles/Colors.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
 
-class EmailSignupForm extends Component {
+class ShowYoga extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
+
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,22 +32,31 @@ class EmailSignupForm extends Component {
     event.preventDefault();
     var buttonSubmit = document.getElementById("buttonSubmitEmailForm");
     buttonSubmit.innerHTML = "Submitting...";
-    base('People Who Requested a Case Packet').create({
-      "Name": `${this.state.name}`,
-      "Email": `${this.state.email}`,
-    }, {typecast: true}, function(err, record) {
+    base("Erin's Yoga Options in NYC").select({
+        // Selecting the first 3 records in Grid view:
+        maxRecords: 3,
+        view: "Grid view"
+    }).eachPage(function page(records, fetchNextPage) {
+        // This function (`page`) will get called for each page of records.
+
+        records.forEach(function(record) {
+            console.log('Retrieved', record.get('Name'));
+        });
+
+        // To fetch the next page of records, call `fetchNextPage`.
+        // If there are more records, `page` will get called again.
+        // If there are no more records, `done` will get called.
+        fetchNextPage();
+
+    }, function done(err) {
         if (err) {
           console.error(err);
-          alert("There was an error submitting your contact information. Please refresh the page and try again. If this keeps happening, email hello@umbn.co for help.");
           return;
         } else {
           buttonSubmit.innerHTML = "Submitted 👍";
         }
-        // console.log(record.getId());
     });
     this.setState({
-      name: '',
-      email: '',
       submitted: true
     });
   };
@@ -59,28 +67,8 @@ class EmailSignupForm extends Component {
         <br/>
         <Paragraph>Do it, please.</Paragraph>
         <br/>
-        <form onSubmit={this.handleSubmit} style={styles.emailSignupForm}>
-          <div className="inputGroup">
-            <input type="text"
-              style={[styles.input, styles.inputAndButton]}
-              value={this.state.name}
-              onChange={(event) => this.setState({ name: event.target.value })}
-              required/>
-            <label htmlFor="Full name" style={styles.label}>
-              Full name
-            </label>
-          </div>
-          <div className="inputGroup">
-            <input type="text"
-              style={[styles.input, styles.inputAndButton]}
-              value={this.state.email}
-              onChange={(event) => this.setState({ email: event.target.value })}
-              required/>
-            <label htmlFor="Email"
-              style={styles.label}>
-              Email
-            </label>
-          </div>
+        <form onSubmit={this.handleSubmit} style={styles.showYoga}>
+
 
           <button type="submit"
             id="buttonSubmitEmailForm"
@@ -96,7 +84,7 @@ class EmailSignupForm extends Component {
 
 const styles = {
   formWrapper: {
-    backgroundColor: colors.backgroundColor,
+    backgroundColor: colors.primary,
     padding: 30,
 
     '@media (min-width: 650px)': { // not large mobile
@@ -109,7 +97,7 @@ const styles = {
       padding: 15,
     },
   },
-  emailSignupForm: {
+  showYoga: {
     margin: '3rem 0',
     display: 'flex',
     flexDirection: 'column',
@@ -164,4 +152,4 @@ const styles = {
   }
 }
 
-export default Radium(EmailSignupForm);
+export default Radium(ShowYoga);
