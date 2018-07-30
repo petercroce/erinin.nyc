@@ -8,17 +8,17 @@ function Footer() {
     <Section>
       <div style={styles.footer} className="footer">
         <div style={styles.footerText}>
-          <span style={styles.footerItem}>Erin in NYC</span>
+          <span style={styles.footerItem}> </span>
           <span style={styles.footerItem}>
-            <a
+            {/* <a
               style={styles.footerItemMiddle}
               href="https://airtable.com"
               target="_blank"
-              rel="noopener noreferrer">
-              🧘
-            </a>
+              rel="noopener noreferrer"> */}
+              🗽
+            {/* </a> */}
           </span>
-          <span style={styles.footerItem}>New York, NY</span>
+          <span style={styles.footerItem}> </span>
         </div>
 
       </div>
@@ -40,8 +40,11 @@ const styles = {
   footerText: {
     display: 'flex',
     justifyContent: 'space-between',
+    flex: 1,
+    flexDirection: 'row',
     width: '90%',
     margin: 0,
+    fontSize: '9rem',
     '@media (max-width: 992px)': { // tablet
       width: '100%',
       flexDirection: 'column',

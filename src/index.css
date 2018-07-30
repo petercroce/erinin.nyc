@@ -4,6 +4,17 @@ Brand Colors
 backgroundColor: #eee
 */
 
+:root {
+  --primary: #95e5c1;
+  --primary-rgba: rgba(149, 229, 193, 0.75);
+  --secondary: #0039A6;
+  --lightGray: #A7A9AC;
+  --darkGray: #808183;
+
+  --textColor: #3d3d3d;
+  --backgroundColor: #eee;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -22,13 +33,13 @@ p {
 
 /* Forms */
 ::placeholder, label {
-  color: #3d3d3d;
+  color: var(--textColor);
 }
 input, textarea {
-  color: #3d3d3d !important;
-  background-color: #eee;
+  color: var(--textColor) !important;
+  background-color: var(--backgroundColor);
   transition: all 0.3s ease-in-out;
-  background-image: linear-gradient(180deg,transparent 97%,rgba(101, 163, 214) 0);
+  background-image: linear-gradient(180deg,transparent 97%, var(--primary-rgba) 0);
   background-size: 0 100%;
   background-repeat: no-repeat;
 }
@@ -45,13 +56,13 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
-  -webkit-text-fill-color: #3d3d3d;
-  -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+  -webkit-text-fill-color: var(--textColor);
+  -webkit-box-shadow: 0 0 0px 1000px var(--backgroundColor) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 input:focus, input:active,
 textarea:focus, textarea:active {
-  background-image: linear-gradient(180deg,transparent 97%,rgba(101, 163, 214) 0);
+  background-image: linear-gradient(180deg,transparent 97%, var(--primary-rgba) 0);
   background-size: 100% 100%;
 }
 /* material design label styling */
@@ -79,41 +90,18 @@ textarea:focus ~ label, textarea:valid ~ label {
 
 /* Links */
 a, a:visited {
-  color: #eee;
-  fill: #eee;
-  background-image: linear-gradient(180deg,transparent 65%,rgba(101, 163, 214, 0.5) 0);
+  color: inherit;
+  fill: inherit;
+  background-image: linear-gradient(180deg,transparent 65%, var(--primary-rgba) 0);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  border-bottom: 1px solid rgba(101, 163, 214, 0.5);
+  border-bottom: 1px solid var(--primary-rgba);
   transition: all 0.3s ease-in-out;
 }
 a:hover, a:active {
-  background-image: linear-gradient(180deg,transparent 65%,rgba(101, 163, 214, 0.5) 0);
+  background-image: linear-gradient(180deg,transparent 65%, var(--primary-rgba) 0);
   background-size: 100% 100%;
 }
-
-.footer a, .footer a:visited {
-  color: #3d3d3d;
-  fill: #3d3d3d;
-  border-bottom: 1px solid rgba(101, 163, 214, 0.5);
-
-}
-/* .footer a {
-  color: #aaa;
-  transition: all 0.3s ease-in-out;
-  background-image: linear-gradient(150deg,transparent 60%,rgba(188, 188, 188, 0.5) 0);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-}
-.footer a:hover {
-  fill: #65a3d6;
-  background-size: 100% 100%;
-}
-.footer a:active {
-  color: #65a3d6;
-  cursor: default;
-  background-image: linear-gradient(150deg,transparent 60%,rgba(188, 188, 188, 0.5) 0);
-} */
 
 
 @font-face {

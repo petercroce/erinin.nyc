@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import colors from '../../../styles/Colors.js';
+
 function WebsiteTitle(props) {
   return (
     <h1 style={styles.title}>{props.children}</h1>
@@ -9,7 +11,7 @@ function WebsiteTitle(props) {
 
 const styles = {
   title: {
-    color: '#eee',
+    color: colors.textColor,
     fontSize: '4rem',
     fontFamily: 'Aleo-Light',
     display: 'block',

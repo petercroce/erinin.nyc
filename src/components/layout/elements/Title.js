@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import colors from '../../../styles/Colors.js';
+
 function Title(props) {
   return (
     <h2 style={styles.title}>{props.children}</h2>
@@ -9,7 +11,7 @@ function Title(props) {
 
 const styles = {
   title: {
-    color: '#eee',
+    color: colors.textColor,
     fontSize: '4rem',
     fontFamily: 'Aleo-Light',
     display: 'block',

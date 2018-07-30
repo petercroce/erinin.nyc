@@ -9,15 +9,15 @@ import WebsiteTitle from '../layout/elements/WebsiteTitle';
 function Header() {
   return (
     <div style={styles.background}>
-      <div style={styles.Header}>
+      <div style={styles.header}>
       <Section>
         <SectionLeft>
           <WebsiteTitle>
-            Transform Meetings
+            Hi bb
           </WebsiteTitle>
 
           <Subtitle>
-            We use play to accelerate creative problem-solving and bring teams together.
+            I'm very excited you're moving to NYC. 
           </Subtitle>
           <br/>
         </SectionLeft>
@@ -27,15 +27,8 @@ function Header() {
   )
 }
 
-// Colors
-// const primary = '#65a3d6';
-// const secondary = '#004787';
-// const darkGray = '#1c1c1c';
-// const lightGray = '#bcbcbc';
-// const backgroundColor = '#eee';
-
 const styles = {
-  Header: {
+  header: {
   }
 }
 

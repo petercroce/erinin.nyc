@@ -2,11 +2,13 @@ import React from 'react';
 import Radium from 'radium';
 
 import Header from '../layout/Header';
+import Body from '../layout/Body';
 import Footer from '../layout/Footer';
 import Navigation from '../layout/Navigation';
 
-import EmailSignupForm from '../layout/elements/EmailSignupForm';
-
+// import NoteTaker from '../layout/elements/NoteTaker';
+// import ShowYoga from '../layout/elements/ShowYoga';
+// import EmailSignupForm from '../layout/elements/EmailSignupForm';
 
 function Home() {
 
@@ -16,7 +18,12 @@ function Home() {
       <Navigation />
 
       <Header></Header>
-      <EmailSignupForm></EmailSignupForm>
+
+      <Body></Body>
+
+      {/* <NoteTaker></NoteTaker> */}
+      {/* <ShowYoga></ShowYoga>
+      <EmailSignupForm></EmailSignupForm> */}
 
       <Footer></Footer>
     </div>

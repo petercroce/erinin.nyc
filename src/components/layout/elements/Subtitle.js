@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import colors from '../../../styles/Colors.js';
+
 function Subtitle(props) {
   return (
     <h2 style={styles.subtitle}>{props.children}</h2>
@@ -9,7 +11,7 @@ function Subtitle(props) {
 
 const styles = {
   subtitle: {
-    color: '#eee',
+    color: colors.textColor,
     fontSize: '2rem',
     fontFamily: 'Aleo-Light',
     lineHeight: 1.2,

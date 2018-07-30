@@ -1,5 +1,5 @@
 export default {
-  primary: "#96d2b7", // Statue of Liberty
+  primary: "#95e5c1", // Statue of Liberty
   secondary: "#0039A6", // MTA
   lightGray: "#A7A9AC", // L
   darkGray: "#808183", // S
