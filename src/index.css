@@ -85,7 +85,7 @@ button:hover {
 /* material design label styling */
 .inputGroup {
   position:relative;
-  margin-bottom:25px;
+  margin: 10px 0;
 }
 label {
   font-size:1.5em;

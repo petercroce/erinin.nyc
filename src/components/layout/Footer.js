@@ -7,13 +7,13 @@ function Footer() {
   return (
     <Section>
       <div style={styles.footer} className="footer">
-        <div style={styles.footerText}>
+        {/* <div style={styles.footerText}> */}
           {/* <span style={styles.footerItem}> </span> */}
           <span style={styles.footerItem}>
               🗽
           </span>
           {/* <span style={styles.footerItem}> </span> */}
-        </div>
+        {/* </div> */}
 
       </div>
     </Section>
@@ -24,8 +24,9 @@ const styles = {
   footer: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     width: '100%',
+    height: 50,
     '@media (max-width: 480px)': { // mobile
     },
   },
@@ -49,7 +50,8 @@ const styles = {
   footerItem: {
     width: 250,
     textAlign: 'center',
-    marginBottom: -15,
+    fontSize: 80,
+    marginBottom: -30,
     '@media (max-width: 992px)': { // tablet
       width: 'none',
     },

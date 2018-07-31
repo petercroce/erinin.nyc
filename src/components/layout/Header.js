@@ -4,6 +4,9 @@ import Radium from 'radium';
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
 
+import WebsiteTitle from '../layout/elements/WebsiteTitle';
+import Subtitle from '../layout/elements/Subtitle';
+import Paragraph from '../layout/elements/Paragraph';
 
 function Header() {
   return (
@@ -11,7 +14,9 @@ function Header() {
       <div style={styles.header}>
       <Section>
         <SectionLeft>
-
+          <WebsiteTitle>Erin is moving to NYC</WebsiteTitle>
+          <Subtitle>And you're excited about it</Subtitle>
+          <Paragraph>This is a safe space. Go ahead. Write a note to Erin about how you feel about her moving to NYC. Don't hold back. I'll grab the tissues.</Paragraph>
         </SectionLeft>
       </Section>
       </div>

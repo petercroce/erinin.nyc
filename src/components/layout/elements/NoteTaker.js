@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import Airtable from 'airtable';
 
-import Title from '../elements/Title';
-import Paragraph from '../elements/Paragraph';
+// import Title from '../elements/Title';
+// import Paragraph from '../elements/Paragraph';
 
 import colors from '../../../styles/Colors.js';
 
@@ -54,10 +54,6 @@ class NoteTaker extends Component {
   render() {
     return (
       <div style={styles.formWrapper}>
-        <Title>Write a note</Title>
-        <br/>
-        <Paragraph>Do it, please.</Paragraph>
-        <br/>
         <form onSubmit={this.handleSubmit} style={styles.form}>
           <div className="inputGroup">
             <input type="text"
@@ -97,20 +93,17 @@ class NoteTaker extends Component {
 const styles = {
   formWrapper: {
     backgroundColor: colors.backgroundColor,
-    padding: 30,
 
     '@media (min-width: 650px)': { // not large mobile
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
     },
     '@media (max-width: 649px)': { // large mobile
       width: '100%',
-      padding: 15,
+      paddingTop: 10,
     },
   },
   form: {
-    margin: '3rem 0',
     display: 'flex',
     flexDirection: 'column',
 
@@ -127,7 +120,7 @@ const styles = {
   },
   input: {
     border: 'none',
-    margin: '1rem 0',
+    marginTop: '1rem',
     border: `3px solid ${colors.primary}`,
     width: 400,
     fontSize: '1.5em',

@@ -7,6 +7,8 @@ import Subtitle from '../layout/elements/Subtitle';
 import Paragraph from '../layout/elements/Paragraph';
 
 import NoteTaker from '../layout/elements/NoteTaker';
+import NoteReader from '../layout/elements/NoteReader';
+
 
 function Body() {
   return (
@@ -14,7 +16,9 @@ function Body() {
       <div style={styles.body}>
       <Section>
         <SectionLeft>
+          
           <NoteTaker></NoteTaker>
+          {/* <NoteReader></NoteReader> */}
         </SectionLeft>
       </Section>
       </div>
