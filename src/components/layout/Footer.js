@@ -8,17 +8,11 @@ function Footer() {
     <Section>
       <div style={styles.footer} className="footer">
         <div style={styles.footerText}>
-          <span style={styles.footerItem}> </span>
+          {/* <span style={styles.footerItem}> </span> */}
           <span style={styles.footerItem}>
-            {/* <a
-              style={styles.footerItemMiddle}
-              href="https://airtable.com"
-              target="_blank"
-              rel="noopener noreferrer"> */}
               🗽
-            {/* </a> */}
           </span>
-          <span style={styles.footerItem}> </span>
+          {/* <span style={styles.footerItem}> </span> */}
         </div>
 
       </div>
@@ -32,38 +26,36 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: 200,
     '@media (max-width: 480px)': { // mobile
-      height: 150,
     },
   },
   footerText: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     flex: 1,
     flexDirection: 'row',
-    width: '90%',
+    // width: '90%',
     margin: 0,
-    fontSize: '9rem',
+    fontSize: '5rem',
     '@media (max-width: 992px)': { // tablet
       width: '100%',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      height: '100%',
-      textAlign: 'center',
+      // flexDirection: 'column',
+      // alignItems: 'center',
+      // justifyContent: 'space-around',
+      // height: '100%',
+      // textAlign: 'center',
     },
   },
   footerItem: {
     width: 250,
     textAlign: 'center',
+    marginBottom: -15,
     '@media (max-width: 992px)': { // tablet
       width: 'none',
     },
   },
   footerItemMiddle: {
-    padding: 10,
-    paddingBottom: 5,
+    padding: '0 10px',
   }
 }
 
