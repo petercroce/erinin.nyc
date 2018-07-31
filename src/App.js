@@ -10,6 +10,7 @@ import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Map from './components/pages/Map';
 
+import colors from './styles/Colors.js';
 
 import './index.css';
 
@@ -36,7 +37,7 @@ class App extends Component {
 const styles = {
   app: {
     // backgroundImage: 'linear-gradient(180deg, rgba(101,163,214,1) 0%, rgba(238,238,238,1) 75%)',
-    backgroundColor: '#eee',
+    backgroundColor: colors.backgroundColor,
     minHeight: '100vh',
     width: '100%',
     overflow: 'hidden',

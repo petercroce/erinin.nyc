@@ -13,8 +13,8 @@ class NoteTaker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      notes: [],
+      name: '',
+      note: '',
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,61 +31,60 @@ class NoteTaker extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    var buttonSubmit = document.getElementById("buttonSubmitEmailForm");
+    var buttonSubmit = document.getElementById("buttonSubmitForm");
     buttonSubmit.innerHTML = "Submitting...";
-
-    base("Erin's Yoga Options in NYC").select({
-        // Selecting the first 3 records in Grid view:
-        maxRecords: 3,
-        view: "Grid view"
-    }).eachPage(function page(records, fetchNextPage) {
-        // This function (`page`) will get called for each page of records.
-
-        records.forEach(function(record) {
-          let name = record.get('Name');
-          let note = record.get('Note');
-          this.setState({
-            name: record.get('Name')
-          });
-          // this.setState((prevState, props) => ({
-          //   // record.get('Note') keeps coming up undefined
-          //   notes: [...prevState.notes, `${record.get('Note')}`]
-          // }));
-        }.bind(this));
-
-        // To fetch the next page of records, call `fetchNextPage`.
-        // If there are more records, `page` will get called again.
-        // If there are no more records, `done` will get called.
-        fetchNextPage();
-
-    }.bind(this), function done(err) {
+    base('Notes').create({
+      "Name": `${this.state.name}`,
+      "Note": `${this.state.note}`,
+    }, {typecast: true}, function(err, record) {
         if (err) {
           console.error(err);
+          alert("There was an error. Please refresh the page and try again. If this keeps happening, ask Peter what the hell is going on.");
           return;
         } else {
-          buttonSubmit.innerHTML = "Submitted 👍";
+          buttonSubmit.innerHTML = "Submit Another";
         }
-    }.bind(this));
-    console.log("state is: ",this.state.name)
+    });
     this.setState({
+      name: '',
+      note: '',
       submitted: true
     });
-    console.log("state is: ",this.state.name)
-
   };
   render() {
     return (
       <div style={styles.formWrapper}>
-        <Title>Complete Form</Title>
+        <Title>Write a note</Title>
         <br/>
         <Paragraph>Do it, please.</Paragraph>
         <br/>
-        <form onSubmit={this.handleSubmit} style={styles.showYoga}>
+        <form onSubmit={this.handleSubmit} style={styles.form}>
+          <div className="inputGroup">
+            <input type="text"
+              style={[styles.input, styles.inputAndButton]}
+              value={this.state.name}
+              onChange={(event) => this.setState({ name: event.target.value })}
+              required/>
+            <label htmlFor="Full name" style={styles.label}>
+              Full name
+            </label>
+          </div>
+          <div className="inputGroup">
+            <textarea type="text" rows="7"
+              style={[styles.input, styles.inputAndButton]}
+              value={this.state.note}
+              onChange={(event) => this.setState({ note: event.target.value })}
+              required >
+            </textarea>
+            <label htmlFor="Note"
+              style={styles.label}>
+              Note
+            </label>
+          </div>
 
-        <Paragraph>{this.state.name}</Paragraph>
           <button type="submit"
-            id="buttonSubmitEmailForm"
-            style={this.state.submitted === false ? [styles.buttonUnsubmitted, styles.button, styles.inputAndButton] : [styles.buttonSubmitted, styles.button, styles.inputAndButton]}>
+            id="buttonSubmitForm"
+            style={this.state.submitted === false ? [styles.button, styles.inputAndButton] : [styles.button, styles.inputAndButton]}>
             Submit
           </button>
         </form>
@@ -97,7 +96,7 @@ class NoteTaker extends Component {
 
 const styles = {
   formWrapper: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.backgroundColor,
     padding: 30,
 
     '@media (min-width: 650px)': { // not large mobile
@@ -110,7 +109,7 @@ const styles = {
       padding: 15,
     },
   },
-  showYoga: {
+  form: {
     margin: '3rem 0',
     display: 'flex',
     flexDirection: 'column',
@@ -127,20 +126,20 @@ const styles = {
     }
   },
   input: {
-    borderRadius: 0,
     border: 'none',
-    borderBottom: `1px solid ${colors.primary}`,
     margin: '1rem 0',
+    border: `3px solid ${colors.primary}`,
     width: 400,
     fontSize: '1.5em',
+    resize: 'none',
     '@media (max-width: 448px)': {
       width: '100%',
     }
   },
   button: {
-    borderRadius: '3px',
+    backgroundColor: 'transparent',
     color: colors.textColor,
-    border: `1px solid ${colors.textColor}`,
+    border: `3px solid ${colors.textColor}`,
     textAlign: 'center',
     width: 400,
     margin: '1rem 0',
@@ -150,12 +149,6 @@ const styles = {
     '@media (max-width: 448px)': {
       width: '100%',
     },
-  },
-  buttonUnsubmitted: {
-    backgroundColor: colors.primary,
-  },
-  buttonSubmitted: {
-    backgroundColor: colors.primary,
   },
   checkbox: {
     marginLeft: 10,
