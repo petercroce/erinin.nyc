@@ -22,7 +22,6 @@ const styles = {
     listStyle: 'none',
     margin: 0,
     padding: 0,
-    // borderBottom: '2px dashed rgba(0,0,0,0.2)',
   },
   navItem: {
     display: 'flex',
