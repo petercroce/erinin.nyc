@@ -23,9 +23,9 @@ const styles = {
     '@media (max-width: 992px)': { // tablet
       fontSize: '1.5rem',
     },
-    '@media (max-width: 649px)': { // large mobile
-      fontSize: '1.25rem',
-    },
+    // '@media (max-width: 649px)': { // large mobile
+    //   fontSize: '1.25rem',
+    // },
     // '@media (max-width: 557px)': { // medium mobile
     //   fontSize: '4em',
     // },
