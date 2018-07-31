@@ -113,6 +113,7 @@ const styles = {
   },
   inputAndButton: {
     fontSize: '1.5em',
+    borderRadius: 0,
     padding: '0.5rem 0.75rem',
     '@media (max-width: 992px)': {
       padding: '.5rem .57rem',

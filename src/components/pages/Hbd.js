@@ -40,6 +40,8 @@ function Hbd() {
             <Link to='/' style={styles.button}>
               Home
             </Link>
+            {/* <a href="/yoga"  style={styles.button}>Agree</a>
+            <a href="/"  style={styles.button}>Home</a> */}
           </div>
 
         </SectionLeft>
@@ -65,12 +67,11 @@ const styles = {
     color: colors.textColor,
     border: `3px solid ${colors.textColor}`,
     textAlign: 'center',
-    margin: '2rem 0',
+    marginBottom: '1rem',
     fontSize: '1.5em',
     padding: '0.5rem 0.75rem',
-    width: 300,
+    width: 200,
     '@media (max-width: 992px)': {
-      marginLeft: 0,
       padding: '.5rem .57rem',
     },
     '@media (max-width: 448px)': {
@@ -78,8 +79,14 @@ const styles = {
     },
   },
   buttonWrapper: {
+    margin: '2rem 0',
     display: 'flex',
     justifyContent: 'space-between',
+    '@media (max-width: 448px)': {
+      width: '100%',
+      flexDirection: 'column',
+      marginTop: '1rem',
+    },
   }
 }
 
