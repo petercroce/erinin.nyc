@@ -36,9 +36,8 @@ class NoteReader extends Component {
     buttonSubmit.innerHTML = "Submitting...";
 
     base("Notes").select({
-        // Selecting the first 3 records in Grid view:
         maxRecords: 3,
-        view: "Grid view"
+        view: "Active Notes"
     }).eachPage(function page(records, fetchNextPage) {
         // This function (`page`) will get called for each page of records.
 
