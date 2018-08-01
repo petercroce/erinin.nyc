@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import Airtable from 'airtable';
 
-// import Title from '../elements/Title';
-import Paragraph from '../elements/Paragraph';
-
 import styleVars from '../../../styles/styleVars.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
@@ -55,18 +52,18 @@ class NoteTaker extends Component {
     return (
       <div style={styles.formWrapper}>
         <form onSubmit={this.handleSubmit} style={styles.form}>
+
           {/* <div className="inputGroup">
             <input type="text"
               style={[styles.input, styles.inputAndButton]}
               value={this.state.name}
               onChange={(event) => this.setState({ name: event.target.value })}
               required/>
-            <label htmlFor="Full name" style={styles.label}>
-              Full name
+            <label htmlFor="Note name" style={styles.label}>
+              Note name
             </label>
           </div> */}
-          <Paragraph>Notes you take here save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a> where you can view <a href="https://airtable.com/tblTsQto3kNbjBtne/viw8lthfxodpr7Mr3" target="_blank" rel="noopener noreferrer">active notes</a> or <a href="https://airtable.com/tblTsQto3kNbjBtne/viwymTFYwDJymJqYc" target="_blank" rel="noopener noreferrer">completed notes</a>.</Paragraph>
-<br/>
+
           <div className="inputGroup">
             <textarea type="text" rows="4"
               style={[styles.input, styles.inputAndButton]}

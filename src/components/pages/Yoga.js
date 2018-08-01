@@ -27,7 +27,8 @@ function Yoga() {
           <Paragraph>
             There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and scheules and other things that might matter to you</a>. And probably some that don't.
           </Paragraph>
-          <Paragraph>That's it really. I'm looking forward to going to yoga with you sometimes. There are a lot of different options and a lot of them have starter deals so we could try a bunch of places if you want. Or maybe you already know one that you love! Namaste, bb.</Paragraph>
+          <Paragraph>That's it. I'm looking forward to going to yoga with you sometimes. There are a lot of different options and a lot of them have starter deals so we could try a bunch of places if you want. Or maybe you already know one that you love! </Paragraph>
+          <Paragraph>Namaste, bb.</Paragraph>
 
           <div style={styles.buttonWrapper}>
             <Link to='/hbd' style={styles.button}>

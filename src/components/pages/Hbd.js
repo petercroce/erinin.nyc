@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
-import Subtitle from '../layout/elements/Subtitle';
 import Paragraph from '../layout/elements/Paragraph';
 import FinePrint from '../layout/elements/FinePrint'
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
@@ -18,18 +17,21 @@ function Hbd() {
       <Section>
         <SectionLeft>
           <WebsiteTitle>
-            Hi bb
+            Hi bb,
           </WebsiteTitle>
 
-          <Subtitle>
+          <Paragraph>
             I'm very excited you're moving to NYC.
-          </Subtitle>
-          <br/>
+          </Paragraph>
           <Paragraph>
             I know it's a big move and will be a big transition for you and I want to do everything I can to help make it easier. I don't think I've thought of everything yet (and I'm open to ideas, please) but I want to make sure you have unlimited yoga for a while so I'm giving you 300 Yoga Bux™ (which coincidentally look a lot like $300 cash) redeemable upon your arrival in NYC.
           </Paragraph>
 
           <Paragraph>(And also I want to share experiences with you during celebration times like this one but this will have to suffice for now. Soon!)</Paragraph>
+
+          <Paragraph>
+            I love you so much. Happy birthday.
+          </Paragraph>
 
           <Paragraph>
             Love,
@@ -40,7 +42,7 @@ function Hbd() {
 
           <div style={styles.buttonWrapper}>
             <Link to='/yoga' style={styles.button}>
-              Agree
+              Accept
             </Link>
             <Link to='/' style={styles.button}>
               Home

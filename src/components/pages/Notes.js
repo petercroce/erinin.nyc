@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import Footer from '../layout/Footer';
 
 import Section from '../layout/elements/Section';
+import Paragraph from '../layout/elements/Paragraph';
 import SectionLeft from '../layout/elements/SectionLeft';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
+import FinePrint from '../layout/elements/FinePrint'
 
 import NoteTaker from '../layout/elements/NoteTaker';
 
@@ -21,15 +23,17 @@ function Notes() {
         <SectionLeft>
 
           <WebsiteTitle>Note Taker</WebsiteTitle>
-
+          <Paragraph>Notes you take here save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a>.</Paragraph>
+<br/>
           <NoteTaker></NoteTaker>
 
 
           <div style={styles.buttonWrapper}>
+            <FinePrint><Link to="/">Read more</Link> about how these notes work.</FinePrint>
 
-            <Link to='/' style={styles.button}>
+            {/* <Link to='/' style={styles.button}>
               Home
-            </Link>
+            </Link> */}
             {/* <a href="/yoga"  style={styles.button}>Agree</a>
             <a href="/"  style={styles.button}>Home</a> */}
           </div>
