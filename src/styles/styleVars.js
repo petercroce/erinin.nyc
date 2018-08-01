@@ -7,4 +7,6 @@ export default {
   textColor: "#3d3d3d",
   backgroundColor: "#eee",
 
+  titleFontStack: "'Bitter-Regular', serif",
+  bodyFontStack: "'Lato-Medium', sans-serif",
 }

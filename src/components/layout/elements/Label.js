@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import styleVars from '../../../styles/styleVars.js';
+
 function Label(props) {
   return (
     <p style={styles.label}>
@@ -11,9 +13,9 @@ function Label(props) {
 
 const styles = {
   label: {
-    color: '#eee',
+    color: styleVars.backgroundColor,
     fontSize: '1.25rem',
-    fontFamily: 'Aleo-Light',
+    fontFamily: styleVars.titleFontStack,
     margin: 0,
     marginBottom: 30,
     '@media (max-width: 480px)': { // mobile

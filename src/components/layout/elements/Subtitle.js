@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 function Subtitle(props) {
   return (
@@ -11,9 +11,9 @@ function Subtitle(props) {
 
 const styles = {
   subtitle: {
-    color: colors.textColor,
+    color: styleVars.textColor,
     fontSize: '2rem',
-    fontFamily: 'Aleo-Light',
+    fontFamily: styleVars.titleFontStack,
     lineHeight: 1.2,
     display: 'block',
 

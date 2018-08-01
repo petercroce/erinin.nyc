@@ -3,6 +3,8 @@ import Radium from 'radium';
 // import { NavLink as ReactRouterNavLink } from 'react-router-dom';
 import '../../index.css';
 
+import styleVars from '../../styles/styleVars.js';
+
 // const NavLink = Radium(ReactRouterNavLink);
 // this isn't working: https://github.com/FormidableLabs/radium/issues/398
 
@@ -28,7 +30,7 @@ const styles = {
     alignSelf: 'center',
     textDecoration: 'none',
     margin: 10,
-    fontFamily: 'Lato-Medium, sans-serif',
+    fontFamily: styleVars.bodyFontStack,
   },
 }
 

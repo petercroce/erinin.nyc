@@ -10,7 +10,7 @@ import Subtitle from '../layout/elements/Subtitle';
 import Paragraph from '../layout/elements/Paragraph';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 
-import colors from '../../styles/Colors.js';
+import styleVars from '../../styles/styleVars.js';
 
 function NotFound() {
   return (
@@ -52,8 +52,8 @@ const styles = {
   button: {
     display: 'block',
     backgroundColor: 'transparent',
-    color: colors.textColor,
-    border: `3px solid ${colors.textColor}`,
+    color: styleVars.textColor,
+    border: `3px solid ${styleVars.textColor}`,
     textAlign: 'center',
     margin: '2rem 0',
     fontSize: '1.5em',

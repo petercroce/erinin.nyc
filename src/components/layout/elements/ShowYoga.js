@@ -5,7 +5,7 @@ import Airtable from 'airtable';
 import Title from '../elements/Title';
 import Paragraph from '../elements/Paragraph';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
 
@@ -84,7 +84,7 @@ class ShowYoga extends Component {
 
 const styles = {
   formWrapper: {
-    backgroundColor: colors.primary,
+    backgroundColor: styleVars.primary,
     padding: 30,
 
     '@media (min-width: 650px)': { // not large mobile
@@ -116,7 +116,7 @@ const styles = {
   input: {
     borderRadius: 0,
     border: 'none',
-    borderBottom: `1px solid ${colors.primary}`,
+    borderBottom: `1px solid ${styleVars.primary}`,
     margin: '1rem 0',
     width: 400,
     fontSize: '1.5em',
@@ -126,8 +126,8 @@ const styles = {
   },
   button: {
     borderRadius: '3px',
-    color: colors.textColor,
-    border: `1px solid ${colors.textColor}`,
+    color: styleVars.textColor,
+    border: `1px solid ${styleVars.textColor}`,
     textAlign: 'center',
     width: 400,
     margin: '1rem 0',
@@ -139,16 +139,16 @@ const styles = {
     },
   },
   buttonUnsubmitted: {
-    backgroundColor: colors.primary,
+    backgroundColor: styleVars.primary,
   },
   buttonSubmitted: {
-    backgroundColor: colors.primary,
+    backgroundColor: styleVars.primary,
   },
   checkbox: {
     marginLeft: 10,
   },
   label: {
-    color: colors.textColor,
+    color: styleVars.textColor,
   }
 }
 

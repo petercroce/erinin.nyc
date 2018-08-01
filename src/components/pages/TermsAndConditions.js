@@ -19,13 +19,8 @@ function Hbd() {
       <Section>
         <SectionLeft>
           <WebsiteTitle>
-            Hi bb
+            Terms and Conditions
           </WebsiteTitle>
-
-          <Subtitle>
-            I'm very excited you're moving to NYC.
-          </Subtitle>
-          <br/>
           <Paragraph>
             I know it's a big move and will be a big transition for you and I want to do everything I can to help make it easier. I don't think I've thought of everything yet (and I'm open to ideas, please) but I want to make sure you have unlimited yoga for a while so I'm giving you 300 Yoga Bux™ (which coincidentally look a lot like $300 cash) redeemable upon your arrival in NYC.
           </Paragraph>
@@ -37,14 +32,13 @@ function Hbd() {
           </Paragraph>
 
           <div style={styles.buttonWrapper}>
-            <Link to='/yoga' style={styles.button}>
-              Agree
+            <Link to='/hbd' style={styles.button}>
+              Back
             </Link>
-            <Link to='/' style={styles.button}>
-              Home
+            <Link to='/more' style={styles.button}>
+              More
             </Link>
-            {/* <a href="/yoga"  style={styles.button}>Agree</a>
-            <a href="/"  style={styles.button}>Home</a> */}
+
           </div>
 
         </SectionLeft>

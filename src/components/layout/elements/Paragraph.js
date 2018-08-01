@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 function Paragraph(props) {
   return (
@@ -13,9 +13,9 @@ function Paragraph(props) {
 
 const styles = {
   paragraph: {
-    color: colors.textColor,
+    color: styleVars.textColor,
     fontSize: '1.25rem',
-    fontFamily: 'Lato-Light',
+    fontFamily: styleVars.bodyFontStack,
     margin: '1em 0 0 0',
     '@media (max-width: 480px)': { // mobile
       fontSize: '1.125rem',

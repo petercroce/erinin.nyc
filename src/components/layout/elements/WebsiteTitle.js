@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 function WebsiteTitle(props) {
   return (
@@ -11,9 +11,9 @@ function WebsiteTitle(props) {
 
 const styles = {
   title: {
-    color: colors.textColor,
+    color: styleVars.textColor,
     fontSize: '4rem',
-    fontFamily: 'Aleo-Light',
+    fontFamily: styleVars.titleFontStack,
     display: 'block',
 
     // '@media (max-width: 1197px)': { // smaller laptops

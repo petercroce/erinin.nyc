@@ -5,7 +5,7 @@ import Airtable from 'airtable';
 // import Title from '../elements/Title';
 // import Paragraph from '../elements/Paragraph';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
 
@@ -55,7 +55,7 @@ class NoteTaker extends Component {
     return (
       <div style={styles.formWrapper}>
         <form onSubmit={this.handleSubmit} style={styles.form}>
-          <div className="inputGroup">
+          {/* <div className="inputGroup">
             <input type="text"
               style={[styles.input, styles.inputAndButton]}
               value={this.state.name}
@@ -64,9 +64,9 @@ class NoteTaker extends Component {
             <label htmlFor="Full name" style={styles.label}>
               Full name
             </label>
-          </div>
+          </div> */}
           <div className="inputGroup">
-            <textarea type="text" rows="7"
+            <textarea type="text" rows="4"
               style={[styles.input, styles.inputAndButton]}
               value={this.state.note}
               onChange={(event) => this.setState({ note: event.target.value })}
@@ -92,7 +92,7 @@ class NoteTaker extends Component {
 
 const styles = {
   formWrapper: {
-    backgroundColor: colors.backgroundColor,
+    backgroundColor: styleVars.backgroundColor,
 
     '@media (min-width: 650px)': { // not large mobile
       display: 'flex',
@@ -100,7 +100,6 @@ const styles = {
     },
     '@media (max-width: 649px)': { // large mobile
       width: '100%',
-      paddingTop: 10,
     },
   },
   form: {
@@ -122,7 +121,7 @@ const styles = {
   input: {
     border: 'none',
     marginTop: '1rem',
-    border: `3px solid ${colors.primary}`,
+    border: `3px solid ${styleVars.primary}`,
     width: 400,
     fontSize: '1.5em',
     resize: 'none',
@@ -132,8 +131,8 @@ const styles = {
   },
   button: {
     backgroundColor: 'transparent',
-    color: colors.textColor,
-    border: `3px solid ${colors.textColor}`,
+    color: styleVars.textColor,
+    border: `3px solid ${styleVars.textColor}`,
     textAlign: 'center',
     width: 400,
     margin: '1rem 0',
@@ -148,7 +147,7 @@ const styles = {
     marginLeft: 10,
   },
   label: {
-    color: colors.textColor,
+    color: styleVars.textColor,
   }
 }
 

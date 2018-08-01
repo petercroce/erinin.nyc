@@ -11,9 +11,10 @@ import Home from './components/pages/Home';
 import Map from './components/pages/Map';
 import Hbd from './components/pages/Hbd';
 import NotFound from './components/pages/NotFound';
+import TermsAndConditions from './components/pages/TermsAndConditions';
 
 
-import colors from './styles/Colors.js';
+import styleVars from './styles/styleVars.js';
 
 import './index.css';
 
@@ -28,6 +29,7 @@ class App extends Component {
                 <Route exact path='/' component={Home} />
                 <Route path='/map' component={Map} />
                 <Route path='/hbd' component={Hbd} />
+                <Route path='/terms-and-conditions' component={TermsAndConditions} />
                 <Route component={NotFound} />
               </Switch>
             </div>
@@ -40,7 +42,7 @@ class App extends Component {
 
 const styles = {
   app: {
-    backgroundColor: colors.backgroundColor,
+    backgroundColor: styleVars.backgroundColor,
     minHeight: '100vh',
     width: '100%',
     overflow: 'hidden',

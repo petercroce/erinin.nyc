@@ -5,7 +5,7 @@ import Airtable from 'airtable';
 import Title from '../elements/Title';
 import Paragraph from '../elements/Paragraph';
 
-import colors from '../../../styles/Colors.js';
+import styleVars from '../../../styles/styleVars.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
 
@@ -140,7 +140,7 @@ class NoteReader extends Component {
 
 const styles = {
   formWrapper: {
-    backgroundColor: colors.backgroundColor,
+    backgroundColor: styleVars.backgroundColor,
     padding: 30,
 
     '@media (min-width: 650px)': { // not large mobile
@@ -172,7 +172,7 @@ const styles = {
   input: {
     border: 'none',
     margin: '1rem 0',
-    border: `3px solid ${colors.primary}`,
+    border: `3px solid ${styleVars.primary}`,
     width: 400,
     fontSize: '1.5em',
     resize: 'none',
@@ -182,8 +182,8 @@ const styles = {
   },
   button: {
     backgroundColor: 'transparent',
-    color: colors.textColor,
-    border: `3px solid ${colors.textColor}`,
+    color: styleVars.textColor,
+    border: `3px solid ${styleVars.textColor}`,
     textAlign: 'center',
     width: 400,
     margin: '1rem 0',
@@ -198,7 +198,7 @@ const styles = {
     marginLeft: 10,
   },
   label: {
-    color: colors.textColor,
+    color: styleVars.textColor,
   }
 }
 

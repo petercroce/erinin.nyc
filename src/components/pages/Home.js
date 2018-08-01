@@ -17,7 +17,7 @@ function Home() {
 
       <Navigation />
 
-      <Header></Header>
+      {/* <Header></Header> */}
 
       <Body></Body>
 
@@ -25,7 +25,7 @@ function Home() {
       {/* <ShowYoga></ShowYoga>
       <EmailSignupForm></EmailSignupForm> */}
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import styleVars from '../../../styles/styleVars.js';
+
 function OnlineMessage() {
   return (
     <div style={styles.offline}>
@@ -15,7 +17,7 @@ function OnlineMessage() {
 const styles = {
   offline: {
     color: '#3d3d3d',
-    fontFamily: 'Lato-Light',
+    fontFamily: styleVars.bodyFontStack,
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
@@ -32,7 +34,7 @@ const styles = {
   offlineTitle: {
     display: 'flex',
     alignSelf: 'center',
-    fontFamily: 'Lato-Medium',
+    fontFamily: styleVars.titleFontStack,
   },
   mobile: {
     '@media (min-width: 480px)': {

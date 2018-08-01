@@ -8,12 +8,15 @@
 
   --textColor: #3d3d3d;
   --backgroundColor: #eee;
+
+  --titleFontStack: 'Bitter-Regular', serif;
+  --bodyFontStack: 'Lato-Medium', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato-Light', sans-serif;
+  font-family: var(--bodyFontStack), sans-serif;
   background-color: var(--backgroundColor) !important;
 }
 p {
@@ -126,10 +129,6 @@ a:hover, a:active {
   src: local('Lato-Medium'), url(./fonts/Lato-Medium.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lato-Light';
-  src: local('Lato-Light'), url(./fonts/Lato-Light.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Aleo-Light';
-  src: local('Aleo-Light'), url(./fonts/Aleo-Light.otf) format('opentype');
+  font-family: 'Bitter-Regular';
+  src: local('Bitter-Regular'), url(./fonts/Bitter-Regular.ttf) format('truetype');
 }
