@@ -75,6 +75,9 @@ const styles = {
     display: 'flex',
     minHeight: '100vh',
     flexDirection: 'column',
+    '@media (max-width: 448px)': {
+      minHeight: 0,
+    },
   },
   innerWrapper: {
     flex: 1,

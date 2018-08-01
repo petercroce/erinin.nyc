@@ -47,13 +47,13 @@ class App extends Component {
 const styles = {
   app: {
     backgroundColor: styleVars.backgroundColor,
-    minHeight: '100vh',
     width: '100%',
     overflow: 'hidden',
 
     maxWidth: 2000,
     margin: '0 auto',
     position: 'relative',
+
   }
 }
 

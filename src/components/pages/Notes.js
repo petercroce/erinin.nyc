@@ -6,7 +6,7 @@ import Section from '../layout/elements/Section';
 import Paragraph from '../layout/elements/Paragraph';
 import SectionLeft from '../layout/elements/SectionLeft';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
-import FinePrint from '../layout/elements/FinePrint'
+// import FinePrint from '../layout/elements/FinePrint'
 
 import NoteTaker from '../layout/elements/NoteTaker';
 
@@ -27,7 +27,7 @@ function Notes() {
 
 
           <div style={styles.buttonWrapper}>
-            <FinePrint><Link to="/">Read more</Link> about how these notes work.</FinePrint>
+            {/* <FinePrint><Link to="/">Read more</Link> about how these notes work.</FinePrint> */}
 
             {/* <Link to='/' style={styles.button}>
               Home
@@ -48,6 +48,9 @@ const styles = {
     display: 'flex',
     minHeight: '100vh',
     flexDirection: 'column',
+    '@media (max-width: 448px)': {
+      minHeight: 0,
+    },
   },
   innerWrapper: {
     flex: 1,
