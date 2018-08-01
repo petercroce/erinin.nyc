@@ -3,7 +3,7 @@ import Radium from 'radium';
 import Airtable from 'airtable';
 
 // import Title from '../elements/Title';
-// import Paragraph from '../elements/Paragraph';
+import Paragraph from '../elements/Paragraph';
 
 import styleVars from '../../../styles/styleVars.js';
 
@@ -65,6 +65,8 @@ class NoteTaker extends Component {
               Full name
             </label>
           </div> */}
+          <Paragraph>Notes you take here save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a> where you can view <a href="https://airtable.com/tblTsQto3kNbjBtne/viw8lthfxodpr7Mr3" target="_blank" rel="noopener noreferrer">active notes</a> or <a href="https://airtable.com/tblTsQto3kNbjBtne/viwymTFYwDJymJqYc" target="_blank" rel="noopener noreferrer">completed notes</a>.</Paragraph>
+<br/>
           <div className="inputGroup">
             <textarea type="text" rows="4"
               style={[styles.input, styles.inputAndButton]}
@@ -93,12 +95,12 @@ class NoteTaker extends Component {
 const styles = {
   formWrapper: {
     backgroundColor: styleVars.backgroundColor,
-
+    width: 400,
     '@media (min-width: 650px)': { // not large mobile
       display: 'flex',
       flexDirection: 'column',
     },
-    '@media (max-width: 649px)': { // large mobile
+    '@media (max-width: 448px)': { // large mobile
       width: '100%',
     },
   },
@@ -119,7 +121,6 @@ const styles = {
     }
   },
   input: {
-    border: 'none',
     marginTop: '1rem',
     border: `3px solid ${styleVars.primary}`,
     width: 400,

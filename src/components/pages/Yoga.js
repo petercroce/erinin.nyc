@@ -6,33 +6,40 @@ import Footer from '../layout/Footer';
 
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
+import Paragraph from '../layout/elements/Paragraph';
+import FinePrint from '../layout/elements/FinePrint'
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
-
-import NoteTaker from '../layout/elements/NoteTaker';
-
 
 import styleVars from '../../styles/styleVars.js';
 
-function Notes() {
+function Yoga() {
   return (
     <div style={styles.outerWrapper}>
       <div style={styles.innerWrapper}>
       <Section>
         <SectionLeft>
+          <WebsiteTitle>
+            Yoga
+          </WebsiteTitle>
 
-          <WebsiteTitle>Note Taker</WebsiteTitle>
-
-          <NoteTaker></NoteTaker>
-
+          <br/>
+          <Paragraph>Okay, sweet. Thanks for accepting, bb.</Paragraph>
+          <Paragraph>
+            There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and scheules and other things that might matter to you</a>. And probably some that don't.
+          </Paragraph>
+          <Paragraph>That's it really. I'm looking forward to going to yoga with you sometimes. There are a lot of different options and a lot of them have starter deals so we could try a bunch of places if you want. Or maybe you already know one that you love! Namaste, bb.</Paragraph>
 
           <div style={styles.buttonWrapper}>
-
+            <Link to='/hbd' style={styles.button}>
+              Back
+            </Link>
             <Link to='/' style={styles.button}>
               Home
             </Link>
             {/* <a href="/yoga"  style={styles.button}>Agree</a>
             <a href="/"  style={styles.button}>Home</a> */}
           </div>
+          <FinePrint>Btw, the link to the Airtable base above is the one that invites you to have access. So you have to click that one first, while logged in to Airtable, to be able to access the base.</FinePrint>
 
         </SectionLeft>
       </Section>
@@ -80,4 +87,4 @@ const styles = {
   }
 }
 
-export default Radium(Notes);
+export default Radium(Yoga);

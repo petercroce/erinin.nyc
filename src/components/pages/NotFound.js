@@ -7,7 +7,6 @@ import Footer from '../layout/Footer';
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
 import Subtitle from '../layout/elements/Subtitle';
-import Paragraph from '../layout/elements/Paragraph';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 
 import styleVars from '../../styles/styleVars.js';

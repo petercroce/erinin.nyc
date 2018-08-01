@@ -9,7 +9,7 @@ function Footer() {
       <div style={styles.footer} className="footer">
         {/* <div style={styles.footerText}> */}
           {/* <span style={styles.footerItem}> </span> */}
-          <span style={styles.footerItem}>
+          <span style={styles.footerItem} role="img" aria-label="Statue of Liberty Emoji">
               🗽
           </span>
           {/* <span style={styles.footerItem}> </span> */}
@@ -51,7 +51,7 @@ const styles = {
     width: 250,
     textAlign: 'center',
     fontSize: 80,
-    marginBottom: -30,
+    marginBottom: -10,
     '@media (max-width: 992px)': { // tablet
       width: 'none',
     },

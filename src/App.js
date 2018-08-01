@@ -6,12 +6,14 @@ import {
   Route,
   Switch } from 'react-router-dom';
 
-import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Map from './components/pages/Map';
 import Hbd from './components/pages/Hbd';
 import NotFound from './components/pages/NotFound';
 import TermsAndConditions from './components/pages/TermsAndConditions';
+import Notes from './components/pages/Notes';
+import Yoga from './components/pages/Yoga';
+
 
 
 import styleVars from './styles/styleVars.js';
@@ -29,6 +31,8 @@ class App extends Component {
                 <Route exact path='/' component={Home} />
                 <Route path='/map' component={Map} />
                 <Route path='/hbd' component={Hbd} />
+                <Route path='/notes' component={Notes} />
+                <Route path='/yoga' component={Yoga} />
                 <Route path='/terms-and-conditions' component={TermsAndConditions} />
                 <Route component={NotFound} />
               </Switch>
@@ -46,6 +50,10 @@ const styles = {
     minHeight: '100vh',
     width: '100%',
     overflow: 'hidden',
+
+    maxWidth: 2000,
+    margin: '0 auto',
+    position: 'relative',
   }
 }
 

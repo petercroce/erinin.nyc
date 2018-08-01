@@ -6,7 +6,6 @@ import Footer from '../layout/Footer';
 
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
-import Subtitle from '../layout/elements/Subtitle';
 import Paragraph from '../layout/elements/Paragraph';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 
@@ -22,21 +21,43 @@ function Hbd() {
             Terms and Conditions
           </WebsiteTitle>
           <Paragraph>
-            I know it's a big move and will be a big transition for you and I want to do everything I can to help make it easier. I don't think I've thought of everything yet (and I'm open to ideas, please) but I want to make sure you have unlimited yoga for a while so I'm giving you 300 Yoga Bux™ (which coincidentally look a lot like $300 cash) redeemable upon your arrival in NYC.
+            By agreeing to accept Yoga Bux™ you acknowledge that you have read the following.
           </Paragraph>
           <Paragraph>
-            There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and scheules and other things that might matter to you</a>. And maybe some that don't.
+            To love is good, too: love being difficult. For one human being to love another: that is perhaps the most difficult of all our tasks, the ultimate, the last test and proof, the work for which all other work is but preparation. For this reason young people, who are beginners in everything, cannot yet know love: they have to learn it. With their whole being, with all their forces, gathered close about their lonely, timid, upward-beating heart, they must learn to love. But learning-time is always a long, secluded time, and so loving, for a long while ahead and far on into life, is — solitude, intensified and deepened loneness for him who loves. Love is at first not anything that means merging, giving over, and uniting with another (for what would a union be of something unclarified and unfinished, still subordinate — ?), it is a high inducement to the individual to ripen, to become something in himself, to become world, to become world for himself for another’s sake, it is a great exacting claim upon him, something that chooses him out and calls him to vast things. Only in this sense, as the task of working at themselves (“to hearken and to hammer day and night”), might young people use the love that is given them. Merging and surrendering and every kind of communion is not for them (who must save and gather for a long, long time still), is the ultimate, is perhaps that for which human lives as yet scarcely suffice.
           </Paragraph>
           <Paragraph>
-            Yoga Bux™ are not limited to the locations therein. <Link to="/terms-and-conditions">Terms and conditions</Link> apply. By clicking "Accept" below you agree to all of them.
+            Do not search now for the answers which cannot be given you because you could not live them. It is a matter of living everything. Live the questions now. Perhaps you will then gradually, without noticing it, one distant live right into the answer.
           </Paragraph>
+          <Paragraph>
+            But it is the difficult that is enjoined upon us, almost everything serious is difficult, and everything is serious. If you only recognize that and contrive, yourself, out of your own disposition and nature, out of your experience and childhood and strength to achieve an entirely individual relationship to sex, then you need no longer fear to lose yourself and become unworthy of your best possession.
+          </Paragraph>
+          <Paragraph>
+            It is good that you are entering first of all upon a profession which makes you independent and places you on your own in every sense. Wait patiently to see whether your innermost life feels constrained by the form of this profession.
+          </Paragraph>
+          <Paragraph>
+            Perhaps it will turn out that you are called to be an artist. Then take your fate upon yourself and bear it, its burden and its greatness, without ever asking for that reward which might come from without.
+          </Paragraph>
+          <Paragraph>
+            Works of art are of an infinite solitariness, and nothing is less likely to bring us near to them than criticism. Only love can apprehend and hold them, and can be just towards them.
+          </Paragraph>
+          <Paragraph>
+            <div>Again and again, however we know the landscape of love</div>
+            <div>and the little churchyard there, with its sorrowing names,</div>
+            <div>and the frighteningly silent abyss into which the others</div>
+            <div>fall: again and again the two of us walk out together</div>
+            <div>under the ancient trees, lie down again and again</div>
+            <div>among the flowers, face to face with the sky.</div>
+
+          </Paragraph>
+
 
           <div style={styles.buttonWrapper}>
             <Link to='/hbd' style={styles.button}>
               Back
             </Link>
-            <Link to='/more' style={styles.button}>
-              More
+            <Link to='/yoga' style={styles.button}>
+              Accept
             </Link>
 
           </div>
@@ -84,7 +105,7 @@ const styles = {
       flexDirection: 'column',
       marginTop: '1.5rem',
     },
-  }
+  },
 }
 
 export default Radium(Hbd);

@@ -2,12 +2,11 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 
-import Footer from '../layout/Footer';
-
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
 import Subtitle from '../layout/elements/Subtitle';
 import Paragraph from '../layout/elements/Paragraph';
+import FinePrint from '../layout/elements/FinePrint'
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 
 import styleVars from '../../styles/styleVars.js';
@@ -29,11 +28,14 @@ function Hbd() {
           <Paragraph>
             I know it's a big move and will be a big transition for you and I want to do everything I can to help make it easier. I don't think I've thought of everything yet (and I'm open to ideas, please) but I want to make sure you have unlimited yoga for a while so I'm giving you 300 Yoga Bux™ (which coincidentally look a lot like $300 cash) redeemable upon your arrival in NYC.
           </Paragraph>
+
+          <Paragraph>(And also I want to share experiences with you during celebration times like this one but this will have to suffice for now. Soon!)</Paragraph>
+
           <Paragraph>
-            There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and scheules and other things that might matter to you</a>. And maybe some that don't.
+            Love,
           </Paragraph>
           <Paragraph>
-            Yoga Bux™ are not limited to the locations therein. <Link to="/terms-and-conditions">Terms and conditions</Link> apply. By clicking "Accept" below you agree to all of them.
+            Peter
           </Paragraph>
 
           <div style={styles.buttonWrapper}>
@@ -43,14 +45,17 @@ function Hbd() {
             <Link to='/' style={styles.button}>
               Home
             </Link>
+
             {/* <a href="/yoga"  style={styles.button}>Agree</a>
             <a href="/"  style={styles.button}>Home</a> */}
           </div>
+          <FinePrint>
+            Yoga Bux™ are not limited to the locations therein. <Link to="/terms-and-conditions">Terms and conditions</Link> apply. By clicking "Accept" below you agree to all of them.
+          </FinePrint>
 
         </SectionLeft>
       </Section>
       </div>
-      <Footer></Footer>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import SectionLeft from '../layout/elements/SectionLeft';
 
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 import Subtitle from '../layout/elements/Subtitle';
-import Paragraph from '../layout/elements/Paragraph';
+// import Paragraph from '../layout/elements/Paragraph';
 
 function Header() {
   return (
@@ -16,7 +16,6 @@ function Header() {
         <SectionLeft>
           <WebsiteTitle>Erin is moving to NYC</WebsiteTitle>
           <Subtitle>And I'm excited</Subtitle>
-          <Paragraph></Paragraph>
           {/* <Paragraph>This is a safe space. Go ahead. Write a note to Erin about how you feel about her moving to NYC. Don't hold back. I'll grab the tissues.</Paragraph> */}
         </SectionLeft>
       </Section>

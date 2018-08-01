@@ -13,7 +13,9 @@ import Navigation from '../layout/Navigation';
 function Home() {
 
   return (
-    <div style={styles.home}>
+    <div style={styles.outerWrapper}>
+      <div style={styles.innerWrapper}>
+
 
       <Navigation />
 
@@ -21,21 +23,22 @@ function Home() {
 
       <Body></Body>
 
-      {/* <NoteTaker></NoteTaker> */}
-      {/* <ShowYoga></ShowYoga>
-      <EmailSignupForm></EmailSignupForm> */}
+      </div>
+      <Footer></Footer>
 
-      {/* <Footer></Footer> */}
     </div>
   )
 }
 
 const styles = {
-  home: {
-    maxWidth: 2000,
-    margin: '0 auto',
-    position: 'relative',
-  }
+  outerWrapper: {
+    display: 'flex',
+    minHeight: '100vh',
+    flexDirection: 'column',
+  },
+  innerWrapper: {
+    flex: 1,
+  },
 
 }
 
