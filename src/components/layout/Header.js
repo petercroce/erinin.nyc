@@ -15,8 +15,9 @@ function Header() {
       <Section>
         <SectionLeft>
           <WebsiteTitle>Erin is moving to NYC</WebsiteTitle>
-          <Subtitle>And you're excited</Subtitle>
-          <Paragraph>This is a safe space. Go ahead. Write a note to Erin about how you feel about her moving to NYC. Don't hold back. I'll grab the tissues.</Paragraph>
+          <Subtitle>And I'm excited</Subtitle>
+          <Paragraph></Paragraph>
+          {/* <Paragraph>This is a safe space. Go ahead. Write a note to Erin about how you feel about her moving to NYC. Don't hold back. I'll grab the tissues.</Paragraph> */}
         </SectionLeft>
       </Section>
       </div>

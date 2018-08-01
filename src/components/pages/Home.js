@@ -17,7 +17,7 @@ function Home() {
 
       <Navigation />
 
-      {/* <Header></Header> */}
+      <Header></Header>
 
       <Body></Body>
 
