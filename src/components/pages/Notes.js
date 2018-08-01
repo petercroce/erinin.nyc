@@ -2,8 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 
-import Footer from '../layout/Footer';
-
 import Section from '../layout/elements/Section';
 import Paragraph from '../layout/elements/Paragraph';
 import SectionLeft from '../layout/elements/SectionLeft';
@@ -23,7 +21,7 @@ function Notes() {
         <SectionLeft>
 
           <WebsiteTitle>Note Taker</WebsiteTitle>
-          <Paragraph>Notes you take here save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a>.</Paragraph>
+          <Paragraph>Notes save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a>.</Paragraph>
 <br/>
           <NoteTaker></NoteTaker>
 
@@ -41,7 +39,6 @@ function Notes() {
         </SectionLeft>
       </Section>
       </div>
-      <Footer></Footer>
     </div>
   )
 }
