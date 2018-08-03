@@ -28,7 +28,7 @@ function Yoga() {
           <Paragraph>
             So yes, you may accept your Yoga Bux™ upon arrival in NYC. There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and schedules and other things that might matter to you</a>. And probably some that don't.
           </Paragraph>
-          <Paragraph>Also I've been working on some yoga puns but I'm afraid if I include them you'll put me down, dog. I promise to avoid the obvious ones. Nah?</Paragraph>
+          <Paragraph>Also I've been working on some yoga puns but I'm afraid if I include them you'll put me down, dog. I promise to avoid the obvious ones. Nah? 'ma leave it at that.</Paragraph>
           <Paragraph>Also found a pretty cool gif of you doing yoga in NYC.</Paragraph>
 
           <div style={styles.buttonWrapper}>
