@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 import Section from '../layout/elements/Section';
 import Paragraph from '../layout/elements/Paragraph';
 import SectionLeft from '../layout/elements/SectionLeft';
+// import SectionRight from '../layout/elements/SectionRight';
+
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
-// import FinePrint from '../layout/elements/FinePrint'
 
 import NoteTaker from '../layout/elements/NoteTaker';
+// import NoteReader from '../layout/elements/NoteReader';
+
 
 
 import styleVars from '../../styles/styleVars.js';
@@ -29,14 +32,17 @@ function Notes() {
           <div style={styles.buttonWrapper}>
             {/* <FinePrint><Link to="/">Read more</Link> about how these notes work.</FinePrint> */}
 
-            {/* <Link to='/' style={styles.button}>
+            <Link to='/' style={styles.button}>
               Home
-            </Link> */}
+            </Link>
             {/* <a href="/yoga"  style={styles.button}>Agree</a>
             <a href="/"  style={styles.button}>Home</a> */}
           </div>
 
         </SectionLeft>
+        {/* <SectionRight>
+          <NoteReader></NoteReader>
+        </SectionRight> */}
       </Section>
       </div>
     </div>

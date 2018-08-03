@@ -7,8 +7,9 @@ import Footer from '../layout/Footer';
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
 import Paragraph from '../layout/elements/Paragraph';
-import FinePrint from '../layout/elements/FinePrint'
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
+import YogaSvg from '../layout/elements/YogaSvg';
+
 
 import styleVars from '../../styles/styleVars.js';
 
@@ -19,28 +20,28 @@ function Yoga() {
       <Section>
         <SectionLeft>
           <WebsiteTitle>
-            Yoga
+            Yoga Bux™
           </WebsiteTitle>
 
           <br/>
-          <Paragraph>Okay, sweet. Thanks for accepting, bb.</Paragraph>
+          <Paragraph>Oh, hey. Thanks for accepting.</Paragraph>
           <Paragraph>
-            There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and scheules and other things that might matter to you</a>. And probably some that don't.
+            So yes, you may accept your Yoga Bux™ upon arrival in NYC. There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and schedules and other things that might matter to you</a>. And probably some that don't.
           </Paragraph>
-          <Paragraph>That's it. I'm looking forward to going to yoga with you sometimes. There are a lot of different options and a lot of them have starter deals so we could try a bunch of places if you want. Or maybe you already know one that you love! </Paragraph>
-          <Paragraph>Namaste, bb.</Paragraph>
+          <Paragraph>Also I've been working on some yoga puns but I'm afraid if I include them you'll put me down, dog. I promise to avoid the obvious ones. Nah?</Paragraph>
+          <Paragraph>Also found a pretty cool gif of you doing yoga in NYC.</Paragraph>
 
           <div style={styles.buttonWrapper}>
-            <Link to='/hbd' style={styles.button}>
-              Back
-            </Link>
+          <YogaSvg></YogaSvg>
             <Link to='/' style={styles.button}>
-              Home
+              Okay that's enough
             </Link>
             {/* <a href="/yoga"  style={styles.button}>Agree</a>
             <a href="/"  style={styles.button}>Home</a> */}
           </div>
-          <FinePrint>Btw, the link to the Airtable base above is the one that invites you to have access. So you have to click that one first, while logged in to Airtable, to be able to access the base.</FinePrint>
+          {/* <FinePrint>Btw, the link to the Airtable base above is the one that invites you to have access. So you have to click that one first, while logged in to Airtable, to be able to access the base.</FinePrint> */}
+
+
 
         </SectionLeft>
       </Section>
@@ -71,7 +72,7 @@ const styles = {
     marginBottom: '1rem',
     fontSize: '1.5em',
     padding: '0.5rem 0.75rem',
-    width: 200,
+    width: '100%',
     '@media (max-width: 992px)': {
       padding: '.5rem .57rem',
     },
@@ -82,10 +83,10 @@ const styles = {
   buttonWrapper: {
     margin: '2rem 0',
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    // justifyContent: 'space-between',
     '@media (max-width: 448px)': {
       width: '100%',
-      flexDirection: 'column',
       marginTop: '1.5rem',
     },
   }

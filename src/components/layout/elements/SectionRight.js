@@ -13,6 +13,7 @@ const styles = {
   section: {
     width: '50%',
     display: 'inline-block',
+    verticalAlign: 'top',
     '@media (max-width: 992px)': { // tablet
       width: '75%',
     },
