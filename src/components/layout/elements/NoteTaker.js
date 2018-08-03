@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import Airtable from 'airtable';
 
+import Paragraph from '../elements/Paragraph';
+
+
+
 import styleVars from '../../../styles/styleVars.js';
 
 var base = new Airtable({apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`}).base('appd70HPb5h5osxI4');
@@ -12,6 +16,7 @@ class NoteTaker extends Component {
     this.state = {
       name: '',
       note: '',
+      notes: [],
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,12 +53,82 @@ class NoteTaker extends Component {
       submitted: true
     });
   };
+  // componentDidMount = (event) => {
+  //   // event.preventDefault();
+  //   // var buttonSubmit = document.getElementById("buttonSubmitEmailForm");
+  //   // buttonSubmit.innerHTML = "Submitting...";
+  //
+  //   base("Notes").select({
+  //       maxRecords: 12,
+  //       view: "Active Notes"
+  //   }).eachPage(function page(records, fetchNextPage) {
+  //       // This function (`page`) will get called for each page of records.
+  //
+  //       records.forEach(function(record) {
+  //
+  //         let name = record.get('Name');
+  //         let note = record.get('Note');
+  //         // const { target: { name, note } } = record
+  //
+  //         console.log(name, note);
+  //         this.setState({
+  //           notes: [...this.state.notes, `${note}`]
+  //         });
+  //       }.bind(this));
+  //
+  //       // To fetch the next page of records, call `fetchNextPage`.
+  //       // If there are more records, `page` will get called again.
+  //       // If there are no more records, `done` will get called.
+  //       fetchNextPage();
+  //
+  //   }.bind(this), function done(err) {
+  //       if (err) {
+  //         console.error(err);
+  //         return;
+  //       }
+  //   }.bind(this));
+  // }
+  componentDidUpdate = () => {
+    // event.preventDefault();
+    // var buttonSubmit = document.getElementById("buttonSubmitEmailForm");
+    // buttonSubmit.innerHTML = "Submitting...";
+
+    base("Notes").select({
+        maxRecords: 12,
+        view: "Active Notes"
+    }).eachPage(function page(records, fetchNextPage) {
+        // This function (`page`) will get called for each page of records.
+
+        records.forEach(function(record) {
+
+          // let name = record.get('Name');
+          let note = record.get('Note');
+          // const { target: { name, note } } = record
+
+          this.setState({
+            notes: [...this.state.notes, `${note}`]
+          });
+        }.bind(this));
+
+        // To fetch the next page of records, call `fetchNextPage`.
+        // If there are more records, `page` will get called again.
+        // If there are no more records, `done` will get called.
+        fetchNextPage();
+
+    }.bind(this), function done(err) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+    }); // bind(this)
+  }
+
   render() {
     return (
       <div style={styles.formWrapper}>
         <form onSubmit={this.handleSubmit} style={styles.form}>
 
-          {/* <div className="inputGroup">
+          <div className="inputGroup">
             <input type="text"
               style={[styles.input, styles.inputAndButton]}
               value={this.state.name}
@@ -62,7 +137,7 @@ class NoteTaker extends Component {
             <label htmlFor="Note name" style={styles.label}>
               Note name
             </label>
-          </div> */}
+          </div>
 
           <div className="inputGroup">
             <textarea type="text" rows="4"
@@ -83,6 +158,19 @@ class NoteTaker extends Component {
             Submit
           </button>
         </form>
+        <Paragraph>{this.state.notes[0]}</Paragraph>
+        <Paragraph>{this.state.notes[1]}</Paragraph>
+        <Paragraph>{this.state.notes[2]}</Paragraph>
+        <Paragraph>{this.state.notes[3]}</Paragraph>
+        <Paragraph>{this.state.notes[4]}</Paragraph>
+        <Paragraph>{this.state.notes[5]}</Paragraph>
+        <Paragraph>{this.state.notes[6]}</Paragraph>
+        <Paragraph>{this.state.notes[7]}</Paragraph>
+        <Paragraph>{this.state.notes[8]}</Paragraph>
+        <Paragraph>{this.state.notes[9]}</Paragraph>
+        <Paragraph>{this.state.notes[10]}</Paragraph>
+        <Paragraph>{this.state.notes[11]}</Paragraph>
+        <Paragraph>{this.state.notes[12]}</Paragraph>
       </div>
     );
   };
@@ -141,12 +229,12 @@ const styles = {
       width: '100%',
     },
   },
+  label: {
+    color: styleVars.textColor,
+  },
   checkbox: {
     marginLeft: 10,
   },
-  label: {
-    color: styleVars.textColor,
-  }
 }
 
 export default Radium(NoteTaker);
