@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server'
+import registerServiceWorker from './registerServiceWorker';
+
 import Reset from './styles/Reset'
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
 // Initialize our styles on the page.
 let styles = ReactDOMServer.renderToStaticMarkup(<Reset />);

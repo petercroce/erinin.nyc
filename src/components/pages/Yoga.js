@@ -22,7 +22,7 @@ function Yoga() {
             Yoga Bux™ Official
           </WebsiteTitle>
           <br/>
-          <Paragraph>This digital gift card hereby bestows 300 Yoga Bux™ to Erin Peace (which coincidentally look a lot like $300 cash).</Paragraph>
+          <Paragraph>This digital happy birthday gift card hereby bestows three hundred Yoga Bux™ (which coincidentally look a lot like $300 cash) to Erin Meisenzahl-Peace.</Paragraph>
           <Paragraph>
             There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and schedules and other things that might matter to you</a>. And probably some that don't.
           </Paragraph>
@@ -35,7 +35,7 @@ function Yoga() {
               Okay that's enough
             </Link>
           </div>
-          
+
         </SectionLeft>
       </Section>
       </div>
