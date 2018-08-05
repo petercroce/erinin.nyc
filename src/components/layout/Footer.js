@@ -59,7 +59,7 @@ const styles = {
     width: '100%',
     height: 50,
     '@media (max-width: 480px)': { // mobile
-      height: 200,
+      height: 100,
     },
   },
   footerText: {
@@ -88,7 +88,7 @@ const styles = {
       width: 'auto',
     },
     sides: {
-      marginBottom: 25,
+      marginBottom: 35,
     },
     middle: {
       position: 'relative',

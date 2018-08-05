@@ -34,6 +34,8 @@ function Notes() {
         </SectionRight>
       </Section>
       </div>
+      <br/>
+      <br/>
       <Footer></Footer>
     </div>
   )

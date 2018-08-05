@@ -15,6 +15,7 @@ const styles = {
     display: 'inline-block',
     verticalAlign: 'top',
     '@media (max-width: 992px)': { // tablet
+      marginTop: 40,
       width: '75%',
     },
     '@media (max-width: 649px)': { // large mobile
