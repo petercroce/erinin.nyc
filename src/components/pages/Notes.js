@@ -2,6 +2,8 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 
+import Footer from '../layout/Footer';
+
 import Paragraph from '../layout/elements/Paragraph';
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
@@ -26,23 +28,13 @@ function Notes() {
           <br/>
           <NoteTaker></NoteTaker>
 
-
-          <div style={styles.buttonWrapper}>
-            {/* <FinePrint><Link to="/">Read more</Link> about how these notes work.</FinePrint> */}
-
-            <Link to='/' style={styles.button}>
-              Home
-            </Link>
-            {/* <a href="/yoga"  style={styles.button}>Agree</a>
-            <a href="/"  style={styles.button}>Home</a> */}
-          </div>
-
         </SectionLeft>
         <SectionRight>
           <NoteReader></NoteReader>
         </SectionRight>
       </Section>
       </div>
+      <Footer></Footer>
     </div>
   )
 }

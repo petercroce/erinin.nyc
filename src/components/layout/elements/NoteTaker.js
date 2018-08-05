@@ -12,6 +12,7 @@ class NoteTaker extends Component {
     this.state = {
       name: '',
       note: '',
+      newNoteId: '',
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,13 +41,15 @@ class NoteTaker extends Component {
           return;
         } else {
           buttonSubmit.innerHTML = "Submit Another";
-        }
-    });
-    this.setState({
-      name: '',
-      note: '',
-      submitted: true
-    });
+          this.setState({
+            name: '',
+            note: '',
+            newNoteId: record.getId(),
+            submitted: true
+          });
+        };
+    }.bind(this));
+
   };
   render() {
     return (
