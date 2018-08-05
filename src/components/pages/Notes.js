@@ -2,15 +2,15 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 
-import Section from '../layout/elements/Section';
 import Paragraph from '../layout/elements/Paragraph';
+import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
-// import SectionRight from '../layout/elements/SectionRight';
-
+import SectionRight from '../layout/elements/SectionRight';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 
+
 import NoteTaker from '../layout/elements/NoteTaker';
-// import NoteReader from '../layout/elements/NoteReader';
+import NoteReader from '../layout/elements/NoteReader';
 
 import styleVars from '../../styles/styleVars.js';
 
@@ -38,9 +38,9 @@ function Notes() {
           </div>
 
         </SectionLeft>
-        {/* <SectionRight>
+        <SectionRight>
           <NoteReader></NoteReader>
-        </SectionRight> */}
+        </SectionRight>
       </Section>
       </div>
     </div>
