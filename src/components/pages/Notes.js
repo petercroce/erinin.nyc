@@ -12,8 +12,6 @@ import WebsiteTitle from '../layout/elements/WebsiteTitle';
 import NoteTaker from '../layout/elements/NoteTaker';
 // import NoteReader from '../layout/elements/NoteReader';
 
-
-
 import styleVars from '../../styles/styleVars.js';
 
 function Notes() {
@@ -25,7 +23,7 @@ function Notes() {
 
           <WebsiteTitle>Note Taker</WebsiteTitle>
           <Paragraph>Notes save in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC base</a>.</Paragraph>
-<br/>
+          <br/>
           <NoteTaker></NoteTaker>
 
 

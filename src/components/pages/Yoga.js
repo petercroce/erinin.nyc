@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 
 import Footer from '../layout/Footer';
 
+import Paragraph from '../layout/elements/Paragraph';
 import Section from '../layout/elements/Section';
 import SectionLeft from '../layout/elements/SectionLeft';
-import Paragraph from '../layout/elements/Paragraph';
 import WebsiteTitle from '../layout/elements/WebsiteTitle';
 import YogaSvg from '../layout/elements/YogaSvg';
-
 
 import styleVars from '../../styles/styleVars.js';
 
@@ -20,13 +19,12 @@ function Yoga() {
       <Section>
         <SectionLeft>
           <WebsiteTitle>
-            Yoga Bux™
+            Yoga Bux™ Official
           </WebsiteTitle>
-
           <br/>
-          <Paragraph>Oh, hey. Thanks for accepting.</Paragraph>
+          <Paragraph>This digital gift card hereby bestows 300 Yoga Bux™ to Erin Peace (which coincidentally look a lot like $300 cash).</Paragraph>
           <Paragraph>
-            So yes, you may accept your Yoga Bux™ upon arrival in NYC. There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and schedules and other things that might matter to you</a>. And probably some that don't.
+            There are <a href="https://airtable.com/invite/l?inviteId=invuEtp3FtLlX7U05&inviteToken=51b872ce4dbb43731c9c03408c81facbb0fff213cf9479bf927ede193bd4130d" target="blank" rel="noopener noreferrer">some options with locations and prices and schedules and other things that might matter to you</a>. And probably some that don't.
           </Paragraph>
           <Paragraph>Also I've been working on some yoga puns but I'm afraid if I include them you'll put me down, dog. I promise to avoid the obvious ones. Nah? 'ma leave it at that.</Paragraph>
           <Paragraph>Also found a pretty cool gif of you doing yoga in NYC.</Paragraph>
@@ -36,13 +34,8 @@ function Yoga() {
             <Link to='/' style={styles.button}>
               Okay that's enough
             </Link>
-            {/* <a href="/yoga"  style={styles.button}>Agree</a>
-            <a href="/"  style={styles.button}>Home</a> */}
           </div>
-          {/* <FinePrint>Btw, the link to the Airtable base above is the one that invites you to have access. So you have to click that one first, while logged in to Airtable, to be able to access the base.</FinePrint> */}
-
-
-
+          
         </SectionLeft>
       </Section>
       </div>

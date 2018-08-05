@@ -14,8 +14,6 @@ import TermsAndConditions from './components/pages/TermsAndConditions';
 import Notes from './components/pages/Notes';
 import Yoga from './components/pages/Yoga';
 
-
-
 import styleVars from './styles/styleVars.js';
 
 import './index.css';

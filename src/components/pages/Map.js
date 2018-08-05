@@ -1,26 +1,21 @@
 import React from 'react';
 import Radium from 'radium';
 
-import Footer from '../layout/Footer';
-import Navigation from '../layout/Navigation';
-
 import '../../styles/map.css';
-// import mapboxgl from '../../assets/mapbox.js';
-//
 // import lines from '../../assets/lines.js';
 // import stops from '../../assets/stops.js';
-
+// import codepenMap from '../../assets/codepen-map.js';
+// import mapboxgl from '../../assets/mapbox.js';
 
 function Map() {
 
   return (
     <div style={styles.map}>
-      <Navigation></Navigation>
+      {/* <Navigation></Navigation> */}
       <div id="map"></div>
       <div class="header-wrap">
         <header>
           <h1>NYC Subway System</h1>
-          <h2>Zoom for detail</h2>
           <div class="lines">
             <span class="A">A</span>
             <span class="A">C</span>
@@ -47,7 +42,6 @@ function Map() {
           </div>
         </header>
       </div>
-      <Footer></Footer>
     </div>
   )
 }
@@ -57,8 +51,8 @@ const styles = {
     maxWidth: 2000,
     margin: '0 auto',
     position: 'relative',
+    height: 150,
   }
-
 }
 
 export default Radium(Map);

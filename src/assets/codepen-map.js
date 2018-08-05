@@ -1,6 +1,9 @@
 // lineData & stops come from geojson files
 // downloaded from NYC's Open Data project.
-
+import SubwayLines from '../assets/SubwayLines.geojson';
+import lineData from '../assets/lines.js';
+import stops from '../assets/stops.js';
+import mapboxgl from '../assets/mapbox.js';
 //http://web.mta.info/developers/resources/line_colors.htm
 const colorMap = {
   A: "#0039A6",
