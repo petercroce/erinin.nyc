@@ -15,7 +15,7 @@ import styleVars from '../../styles/styleVars.js';
 function Home() {
   // make it update https://reactjs.org/docs/state-and-lifecycle.html
   function getTimeLeft() {
-    let arrival = new Date('August 24, 2018 20:30:00 UTC'); // 8:30 pm Aug 24 EST in GMT (EST + 4)
+    let arrival = new Date('August 25, 2018 00:30:00 UTC'); // 8:30 pm Aug 24 EST in GMT (EST + 4)
     let now = Date.now();
     let countdown = arrival - now;
     return countdown;
