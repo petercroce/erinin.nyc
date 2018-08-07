@@ -13,6 +13,33 @@ import Paragraph from '../layout/elements/Paragraph';
 import styleVars from '../../styles/styleVars.js';
 
 function Home() {
+  // make it update https://reactjs.org/docs/state-and-lifecycle.html
+  function getTimeLeft() {
+    let arrival = new Date('August 25, 2018 00:30:00'); // 8:30 pm Aug 24 EST in GMT (EST + 4)
+    let now = Date.now();
+    let countdown = arrival - now;
+    return countdown;
+  }
+  function convertMS(ms) {
+    var d, h, m, s;
+    s = Math.floor(ms / 1000);
+    m = Math.floor(s / 60);
+    s = s % 60;
+    h = Math.floor(m / 60);
+    m = m % 60;
+    d = Math.floor(h / 24);
+    h = h % 24;
+    return { d: d, h: h, m: m, s: s };
+  };
+
+  let countdown = getTimeLeft();
+  countdown = convertMS(countdown);
+  // function tick(num) {
+  //   setTimeout((num) => {
+  //     num
+  //   })
+  // }
+  // countdown = tick(countdown);
   return (
     <div style={styles.outerWrapper}>
       <div style={styles.innerWrapper}>
@@ -20,10 +47,21 @@ function Home() {
       <Header></Header>
       <Section>
         <SectionLeft>
-          <Paragraph>And I'm exicted about it so I made this as a thing we can play with together. Who knows what we will make of it! But for now, here are some things it does.</Paragraph>
-          <Paragraph><Link to="/notes">Take a note</Link> and save it in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC Airtable base</a>.</Paragraph>
-          <Paragraph>Add it to your iPhone home screen as a quick way to save notes to the above.</Paragraph>
-          <Paragraph>Read your <Link to="/yoga">digital happy birthday gift card</Link>. It's not as good as a real one. I'm excited to make real things with you soon, without a screen between us.</Paragraph>
+          <Paragraph>
+            And I'm exicted about it so I made this as a thing we can play with together. Who knows what we will make of it! But for now, here are some things it does.
+          </Paragraph>
+          <Paragraph>
+            <Link to="/notes">Take a note</Link> and save it in your <a href="https://airtable.com/tblTsQto3kNbjBtne/viwhQ28WeObIFLtXi" target="_blank" rel="noopener noreferrer">NYC Airtable base</a>.
+          </Paragraph>
+          <Paragraph>
+            Add it to your iPhone home screen as a quick way to save notes to the above.
+          </Paragraph>
+          <Paragraph>
+            Read your <Link to="/yoga">digital happy birthday gift card</Link>. It's not as good as a real one. I'm excited to make real things with you soon, without a screen between us.
+          </Paragraph>
+          <Paragraph>
+            See you in {`${countdown.d} days ${countdown.h} hours and ${countdown.m} minutes`}.
+          </Paragraph>
           <div style={styles.buttonWrapper}>
             <Link to='/notes' style={styles.button}>
               Take Note
